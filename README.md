@@ -1,4 +1,4 @@
-#lambhack
+# lambhack
 A vulnerable serverless lambda application. This is certainly a bad idea to base any coding patterns of what you see here.
 
 lambhack allows you to take advantage of our tried and true application security problems, namely arbitrary code execution, XSS, injection attacks aand more.
@@ -12,12 +12,12 @@ See Velocity preso > http://www.slideshare.net/wickett/serverless-security-are-y
 ## Example CMDEXE
 
 You can pass OS commands in the query string args
-```
+```bash
 $ curl “https://XXXX.execute-api.us-east-1.amazonaws.com/prod/lambhack/c?args=uname+-a;+sleep+1"
 ```
 
 Lambda container reuse in action
-```
+```bash
 $ curl “https://XXXX.execute-api.us-east-1.amazonaws.com/prod/lambhack/c?args=ls+/tmp;+sleep+1"
 
 $ curl “https://XXXX.execute-api.us-east-1.amazonaws.com/prod/lambhack/c?args=touch+/tmp/wickettfile;+sleep+1”
@@ -41,7 +41,7 @@ MIT License
 ## Contributing
 Send in PRs
 
-## Known Problems
+## ToDo
 * No UI!
 * No XSS attacks
 * No Injection attacks
